@@ -24,7 +24,7 @@ class Student {
         char gradelevel=sc.next().charAt(0);
         System.out.println("Enter your GPA:");
         float gpa=sc.nextFloat();
-        Student S=new Student(studentname,gradelevel,gpa);
+        Student s=new Student(studentname,gradelevel,gpa);
         while(true){
             System.out.println("1.Upadte");
             System.out.println("2.Display");
@@ -33,10 +33,10 @@ class Student {
             if(a==1){
                 System.out.println("Enter your GPA");
                 float gPA=sc.nextFloat();
-                S.updateGPA(gPA);
+                s.updateGPA(gPA);
             }
             else if(a==2){
-                System.out.println(S.displayGPA());
+                System.out.println(s.displayGPA());
             }
             else{
                 break;
