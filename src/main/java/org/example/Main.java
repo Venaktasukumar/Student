@@ -1,42 +1,42 @@
 package org.example;
 import java.util.Scanner;
 class Student {
-    String Name;
-    char Grade;
-    float GPA;
-    Student(String s, char G, float gpa){
-        Name=s;
-        Grade=G;
-        GPA=gpa;
+    String name;
+    char grade;
+    float gPA;
+    Student(String s, char g, float gpa){
+        name=s;
+        grade=g;
+        gPA=gpa;
     }
-    public void Update_GPA(float G_p_A){
-        GPA=G_p_A;
+    public void updateGPA(float gPa){
+        gPA=gPa;
         System.out.println("Your cgpa is updated");
     }
-    public String Display_GPA(){
-        return Name+" has a gpa is "+ GPA;
+    public String displayGPA(){
+        return name+" has a gpa is "+ gPA;
     }
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the student name:");
-        String Student_Name=sc.nextLine();
+        String studentname=sc.nextLine();
         System.out.println("Enter your Grade:");
-        char Grade_Level=sc.next().charAt(0);
+        char gradelevel=sc.next().charAt(0);
         System.out.println("Enter your GPA:");
-        float GPA=sc.nextFloat();
-        Student S=new Student(Student_Name,Grade_Level,GPA);
+        float gpa=sc.nextFloat();
+        Student S=new Student(studentname,gradelevel,gpa);
         while(true){
             System.out.println("1.Upadte");
             System.out.println("2.Display");
             System.out.println("3.Exit");
-            int A= sc.nextInt();
-            if(A==1){
+            int a= sc.nextInt();
+            if(a==1){
                 System.out.println("Enter your GPA");
-                float g_p_a=sc.nextFloat();
-                S.Update_GPA(g_p_a);
+                float gPA=sc.nextFloat();
+                S.updateGPA(gPA);
             }
-            else if(A==2){
-                System.out.println(S.Display_GPA());
+            else if(a==2){
+                System.out.println(S.displayGPA());
             }
             else{
                 break;
