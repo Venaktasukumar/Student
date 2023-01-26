@@ -13,7 +13,7 @@ class Student {
         gPA=gPa;
         System.out.println("Your cgpa is updated");
     }
-    public String displayGPA(){
+    public String displayGPa(){
         return name+" has a gpa is "+ gPA;
     }
     public static void main(String[] args){
@@ -36,7 +36,7 @@ class Student {
                 s.updateGPA(gPA);
             }
             else if(a==2){
-                System.out.println(s.displayGPA());
+                System.out.println(s.displayGPa());
             }
             else{
                 break;
