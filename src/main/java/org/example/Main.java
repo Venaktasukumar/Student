@@ -2,6 +2,7 @@ package org.example;
 import java.util.Scanner;
 import java.util.logging.*;
 class Student {
+    Logger l = Logger.getLogger("com.api.jar");
     String name;
     char grade;
     float gPA;
@@ -11,7 +12,6 @@ class Student {
         gPA=gpa;
     }
     public void updateGPA(float gPa){
-        Logger l = Logger.getLogger("com.api.jar");
         gPA=gPa;
         l.info("Your cgpa is updated");
     }
