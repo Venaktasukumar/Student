@@ -39,7 +39,8 @@ class Student {
                 s.updateGPA(gPA);
             }
             else if(a==2){
-                l.info(" "+s.displayGPa());
+                String z=s.displayGPa();
+                l.info(z);
             }
             else{
                 break;
