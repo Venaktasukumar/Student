@@ -1,5 +1,6 @@
 package org.example;
 import java.util.Scanner;
+import java.util.logging.*;
 class Student {
     String name;
     char grade;
@@ -10,33 +11,35 @@ class Student {
         gPA=gpa;
     }
     public void updateGPA(float gPa){
+        Logger l = Logger.getLogger("com.api.jar");
         gPA=gPa;
-        System.out.println("Your cgpa is updated");
+        l.info("Your cgpa is updated");
     }
     public String displayGPa(){
         return name+" has a gpa is "+ gPA;
     }
     public static void main(String[] args){
+        Logger l = Logger.getLogger("com.api.jar");
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the student name:");
+        l.info("Enter the student name:");
         String studentname=sc.nextLine();
-        System.out.println("Enter your Grade:");
+        l.info("Enter your Grade:");
         char gradelevel=sc.next().charAt(0);
-        System.out.println("Enter your GPA:");
+        l.info("Enter your GPA:");
         float gpa=sc.nextFloat();
         Student s=new Student(studentname,gradelevel,gpa);
         while(true){
-            System.out.println("1.Upadte");
-            System.out.println("2.Display");
-            System.out.println("3.Exit");
+            l.info("1.Upadte");
+            l.info("2.Display");
+            l.info("3.Exit");
             int a= sc.nextInt();
             if(a==1){
-                System.out.println("Enter your GPA");
+                l.info("Enter your GPA");
                 float gPA=sc.nextFloat();
                 s.updateGPA(gPA);
             }
             else if(a==2){
-                System.out.println(s.displayGPa());
+                l.info(s.displayGPa());
             }
             else{
                 break;
