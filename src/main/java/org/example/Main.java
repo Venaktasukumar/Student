@@ -39,7 +39,7 @@ class Student {
                 s.updateGPA(gPA);
             }
             else if(a==2){
-                l.info(""+s.displayGPa());
+                l.info(" "+s.displayGPa());
             }
             else{
                 break;
