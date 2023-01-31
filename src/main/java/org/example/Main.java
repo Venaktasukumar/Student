@@ -21,15 +21,14 @@ class Student {
     public static void main(String[] args){
         Logger l = Logger.getLogger("com.api.jar");
         Scanner sc=new Scanner(System.in);
-        try{
-            l.info("Enter the student name:");
-            String studentname=sc.nextLine();
-            l.info("Enter your Grade:");
-            char gradelevel=sc.next().charAt(0);
-            l.info("Enter your GPA:");
-            float gpa=sc.nextFloat();
-            Student s=new Student(studentname,gradelevel,gpa);
-            while(true){
+        l.info("Enter the student name:");
+        String studentname=sc.nextLine();
+        l.info("Enter your Grade:");
+        char gradelevel=sc.next().charAt(0);
+        l.info("Enter your GPA:");
+        float gpa=sc.nextFloat();
+        Student s=new Student(studentname,gradelevel,gpa);
+        while(true){
                 l.info("1.Upadte");
                 l.info("2.Display");
                 l.info("3.Exit");
@@ -51,10 +50,6 @@ class Student {
                     l.info("invalid choice");
                 }
             }
-        }
-        catch(InputMismatchException e){
-            l.info("invalid input "+e);
-        }
         sc.close();
     }
 }
